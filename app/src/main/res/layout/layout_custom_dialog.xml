@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit your review"
+        android:textSize="20dp"
+        android:textColor="@color/black"/>
+
+   <EditText
+       android:id="@+id/review_text"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="Write a review" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/rating_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rating (1-5):"
+            android:textColor="@color/black"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/rating_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-9dp"
+            android:layout_toRightOf="@+id/rating_text"
+            android:hint="0"
+            android:inputType="numberDecimal" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/location_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Add location"
+        android:drawableLeft="@drawable/add_location_icon"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/add_image_btn"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/add_image_icon"
+        android:text="Add image"
+        android:textAllCaps="false"
+        android:textColor="@color/black"/>
+
+        <ImageView
+            android:id="@+id/show_selected_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/add_image_btn" />
+
+        <Button
+            android:id="@+id/load_review_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:backgroundTint="@color/green_button"
+            android:text="load image"
+            android:onClick="uploadReviewImage"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/submit_review_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:backgroundTint="@color/orange"
+        android:layout_gravity="end" />
+
+</LinearLayout>
